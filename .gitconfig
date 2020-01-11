@@ -1,0 +1,6 @@
+[user]
+	name = Artem Vang
+	email = vangogius@gmail.com
+[push]
+	default = current
+	followTags = true
