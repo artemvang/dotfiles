@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+sleep 0.2
+scrot /tmp/screen.png -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
