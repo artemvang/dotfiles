@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+xrandr --auto
+
 xautolock -time 10 -locker slock &
 xss-lock -- slock &
 
@@ -18,6 +20,6 @@ dwmbar &
 dunst &
 
 while :; do
-	ssh-agent dwm || break
+    ssh-agent dwm || break
 done
 
