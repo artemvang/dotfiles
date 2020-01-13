@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+exec_line=$(pgrep -a ffcast)
+
+if [ -z "$exec_line" ]; then
+    notify-send "Can't find screencast session"
+else
+    video_path=$(echo $exec_line | sed -E 's/.* rec (.*)/\1/')
+    video_file=$(basename -- $video_path)
+    
+    pkill -fxn '(/\S+)*ffmpeg\s.*\sx11grab\s.*'
+    notify-send "Screencast stopped, check $video_file"
+fi

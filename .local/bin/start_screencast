@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+SCREENCASTS_PATH=$HOME/screencasts
+DATE=$(date +%F_%R)
+
+mkdir -p $SCREENCASTS_PATH
+
+ffcast -q $(while slop -q -n -f '-g %g ';do :;done) rec $SCREENCASTS_PATH/record-$DATE.mp4 &
+
+notify-send "Screencast started"
