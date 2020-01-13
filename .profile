@@ -5,6 +5,7 @@ export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 
 LANG="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
