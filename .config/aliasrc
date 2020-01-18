@@ -5,6 +5,15 @@ alias tsm="transmission-remote"
 alias wttr="curl wttr.in/Kyiv"
 alias bc="bc -lq"
 
-function 0x0 { curl -F"file=@$@" https://0x0.st; }
-function brightness {  xrandr --output `xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1` --brightness $@; }
+function 0x0 {
+    curl -F"file=@$@" https://0x0.st;
+}
+
+function brightness {
+    xrandr --output `xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1` --brightness $@;
+}
+
+function f() {
+    find . -name "*$**"
+}
 
