@@ -4,6 +4,7 @@ alias ptv="python -m pytest -vv"
 alias tsm="transmission-remote"
 alias wttr="curl wttr.in/Kyiv"
 alias bc="bc -lq"
+alias lynx="lynx --display-charset=utf-8"
 
 function 0x0 {
     curl -F"file=@$@" https://0x0.st;
