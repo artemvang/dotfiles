@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 [ -f "$HOME/.config/aliasrc" ] && . "$HOME/.config/aliasrc"
+[ -f "$HOME/.env" ] && . "$HOME/.env"
 
 if [ -d $ZSH ]; then
     ZSH_THEME=""
