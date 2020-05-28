@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -c 5-)
+echo "  $SSID"

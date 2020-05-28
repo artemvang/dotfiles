@@ -2,24 +2,22 @@
 
 trap 'update' 1
 
-SCRIPTS_PATH="$HOME/.local/bin/bar/"
-
 delim="|"
 
 status() {
-	$SCRIPTS_PATH/wifi
+	./wifi
     echo $delim
-	$SCRIPTS_PATH/volume
+	./volume
     echo $delim
-	$SCRIPTS_PATH/battery
+    ./battery
     echo $delim
-	$SCRIPTS_PATH/memory
+    ./memory
     echo $delim
-	$SCRIPTS_PATH/disk
+    ./disk
     echo $delim
-	$SCRIPTS_PATH/lang
+    ./lang
 	echo $delim
-	$SCRIPTS_PATH/clock
+    ./clock
 }
 
 
