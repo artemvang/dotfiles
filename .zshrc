@@ -19,3 +19,10 @@ if [ -d $ZSH ]; then
         prompt pure
     fi
 fi
+
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+
+ssh-add -l > /dev/null || ssh-add > /dev/null
