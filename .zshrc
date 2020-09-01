@@ -13,6 +13,9 @@ if [ -d $ZSH ]; then
         ssh-agent
     )
 
+    zstyle :omz:plugins:ssh-agent agent-forwarding on
+    zstyle :omz:plugins:ssh-agent identities id_ed25519
+
     source $ZSH/oh-my-zsh.sh
 
     if [ -d "$HOME/.zfunctions" ]; then
