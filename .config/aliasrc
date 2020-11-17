@@ -5,9 +5,10 @@ alias tsm="transmission-remote"
 alias wttr="curl wttr.in/Kyiv"
 alias bc="bc -lq"
 alias lynx="lynx --display-charset=utf-8"
+alias grep="grep --color=always"
 
 function 0x0 {
-    curl -F"file=@$@" https://0x0.st;
+    curl -F"f=@$@" https://nptr.kecyk.com/;
 }
 
 function brightness {
