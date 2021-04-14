@@ -11,6 +11,7 @@ if [ -d $ZSH ]; then
         pyenv
         tmux
         ssh-agent
+        terraform
     )
 
     zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -29,3 +30,11 @@ if [ ! -S ~/.ssh/ssh_auth_sock ]; then
   eval `ssh-agent`
   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
+
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . '/home/vang/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . '/home/vang/google-cloud-sdk/completion.zsh.inc'; fi
