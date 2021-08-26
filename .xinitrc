@@ -1,28 +1,28 @@
 #!/usr/bin/env sh
 
-xrandr --auto
+~/.screenlayout/display.sh
 
 xautolock -time 10 -locker slock &
 xss-lock -- slock &
 
-test -d /usr/share/fonts/local && xset +fp /usr/share/fonts/local
-xset fp rehash
-xset -b # disable bell
+# test -d /usr/share/fonts/local && xset +fp /usr/share/fonts/local
+# xset fp rehash
+# xset -b # disable bell
 
 setxkbmap -device 16 "us,ru" ",winkeys" "grp:alt_shift_toggle"
-setxkbmap -device 20 "us,ru" ",winkeys" "grp:alt_shift_toggle"
+# setxkbmap -device 20 "us,ru" ",winkeys" "grp:alt_shift_toggle"
 
 xset s off
 xset m 0 1
 
 # Load Xresources
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f /home/$USER/.Xresources ]] && xrdb -load /home/$USER/.Xresources &
 
-# X related jobs
+# set background, dwmbar and notifier
 setbg &
 dwmbar &
 dunst &
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+sxhkd -c /home/$USER/.config/sxhkd/sxhkdrc &
 
 while :; do
     ssh-agent dwm || break
