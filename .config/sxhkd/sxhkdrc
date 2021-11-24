@@ -14,3 +14,12 @@ super + p
 super + Escape
 	pkill -USR1 -x sxhkd
 
+#Volume Control
+XF86AudioLowerVolume
+	amixer set Master 5%-
+
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+
+XF86AudioMute
+	amixer set Master toggle

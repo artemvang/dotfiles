@@ -11,7 +11,6 @@ if [ -d $ZSH ]; then
         pyenv
         tmux
         ssh-agent
-        terraform
     )
 
     zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -38,3 +37,8 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . '/home/vang/google-cloud
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . '/home/vang/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [ -d "$HOME/.bookmarks" ]; then
+  export CDPATH=".:$HOME/.bookmarks:/"
+  alias goto="cd -P"
+fi
