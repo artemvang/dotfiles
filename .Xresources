@@ -1,26 +1,40 @@
-!! Appearance
-visualBell: true
-xterm*faceName: Iosevka Nerd Font
-xterm*faceSize: 9
+! dwm
+dwm.font: monospace:size=14
+dwm.normbgcolor: #262626
+dwm.normbordercolor: #ac8aac
+dwm.normfgcolor: #e7e7e7
+dwm.selbgcolor: #8f8aac
+dwm.selbordercolor: #ac8aac
+dwm.selfgcolor: #f5f5f5
+dwm.borderpx: 1
+dwm.mfact: 0.6
+
+! dmenu
+dmenu.font: monospace:size=14
+dmenu.background: #262626
+dmenu.foreground: #e7e7e7
+dmenu.selbackground: #8f8aac
+dmenu.selforeground: #f5f5f5
 
 ! Mountain Xresources palette
-*.foreground: #f0f0f0
-*.background: #0f0f0f
-*.color0:     #262626
-*.color8:     #4c4c4c
-*.color1:     #ac8a8c
-*.color9:     #c49ea0
-*.color2:     #8aac8b
-*.color10:    #9ec49f
-*.color3:     #aca98a
-*.color11:    #c4c19e
-*.color4:     #8f8aac
-*.color12:    #a39ec4
-*.color5:     #ac8aac
-*.color13:    #c49ec4
-*.color6:     #8aabac
-*.color14:    #9ec3c4
-*.color7:     #e7e7e7
-*.color15:    #f5f5f5
+st.foreground: #e7e7e7
+st.background: #262626
+st.color0:     #262626
+st.color8:     #4c4c4c
+st.color12:    #ac8a8c
+st.color9:     #c49ea0
+st.color2:     #8aac8b
+st.color10:    #9ec49f
+st.color3:     #aca98a
+st.color11:    #c4c19e
+st.color4:     #8f8aac
+st.color12:    #a39ec4
+st.color5:     #ac8aac
+st.color13:    #c49ec4
+st.color6:     #8aabac
+st.color14:    #9ec3c4
+st.color7:     #e7e7e7
+st.color15:    #f5f5f5
+st.font:     monospace:size=14
 
 Xcursor.size: 9
